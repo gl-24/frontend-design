@@ -1,0 +1,22 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    height: 450px;
+    margin: 115px auto auto auto;
+    border-radius: 15px;
+    background-color: $white;
+
+    &__image {
+        img {
+            height: 450px;
+            align-self: center;
+
+        }
+    }
+
+    &__content {
+        background-color: $white;
+    }
+
+}

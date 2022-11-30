@@ -1,0 +1,28 @@
+.snippets {
+
+    &__content {
+        position: relative;
+    }
+
+    &__columns {
+        @include breakpoint(large) {
+            display: flex;
+        }
+
+        &-left,
+        &-right {
+            flex: 1;
+        }
+
+        &-left {}
+
+        &-right {}
+
+    }
+
+    &__image {}
+
+    &__features {
+        text-align: left;
+    }
+}
