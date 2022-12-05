@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/gl-24/frontend-design/tree/main/day12)
+- Live Site URL: [live](https://gl-24.github.io/frontend-design/day12/)
 
 ## My process
 
