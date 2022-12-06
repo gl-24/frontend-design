@@ -1,3 +1,18 @@
+:root {
+    --clr-primary-900: hsl(215, 51%, 70%);
+    --clr-primary-400: hsl(178, 100%, 50%);
+    --clr-neutral-100: hsl(217, 54%, 11%);
+    --clr-neutral-400: hsl(216, 50%, 16%);
+    --clr-neutral-900: hsl(215, 32%, 27%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --ff-base: 'Outfit', sans-serif;
+
+    --ff-light: 300;
+    --ff-regular: 400;
+    --ff-bold: 600;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -8,10 +23,11 @@
 }
 
 /*
-    2. Remove default margin
+    2. Remove default margin and padding
   */
 * {
     margin: 0;
+    padding: 0;
 }
 
 /*
@@ -65,4 +81,149 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: 1.125rem;
+    background-color: var(--clr-neutral-100);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.container {
+    background-color: var(--clr-neutral-400);
+    border-radius: 1.125rem;
+    height: 590px;
+    width: 340px;
+    padding: 22px;
+}
+
+.img-container {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 0.75rem;
+}
+
+.img-container img {
+    object-fit: cover;
+    border-radius: 0.75rem;
+    background-repeat: no-repeat;
+
+}
+
+.img-container::after {
+    content: "";
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-primary-400);
+    opacity: 0;
+    transition-property: opacity;
+    border-radius: 0.75rem;
+}
+
+.img-container:hover::after {
+    opacity: 0.6;
+
+}
+
+.view-icon {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    opacity: 0;
+}
+
+.img-container:hover .view-icon {
+    opacity: 1;
+}
+
+
+
+/* picture img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+} */
+
+
+
+
+h3 {
+    color: var(--clr-neutral-white);
+    margin-bottom: 15px;
+    font-weight: var(--ff-bold)
+}
+
+h3:hover {
+    cursor: pointer;
+    color: var(--clr-primary-400);
+}
+
+.price-day {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price p {
+    color: var(--clr-primary-400);
+    font-weight: var(--ff-light);
+    font-size: 1rem;
+}
+
+
+.day {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.day p {
+    color: var(--clr-primary-900);
+    font-size: 1rem;
+}
+
+.line {
+    color: var(--clr-primary-900);
+    font-weight: var(--ff-light);
+    margin-bottom: 20px;
+}
+
+
+span {
+    color: var(--clr-neutral-white);
+}
+
+span:hover {
+    cursor: pointer;
+    color: var(--clr-primary-400);
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid var(--clr-neutral-900);
+}
+
+.user {
+    display: flex;
+    gap: 14px;
+}
+
+.user img {
+    height: 37px;
+    width: 37px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
