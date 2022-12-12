@@ -1,0 +1,202 @@
+:root {
+  /* colors */
+  --clr-primary-400: hsl(257, 40%, 49%);
+  --clr-primary-900: hsl(300, 69%, 71%);
+
+  /* font */
+  --ff-base: 'Open Sans', sans-serif;
+  --ff-headings: 'Poppins', sans-serif;
+
+  /* font weight */
+  --fw-light: 400;
+  --fw-bold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin and padding
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  padding: 70px 80px 80px 80px;
+  background-image: url(../images/bg-mobile.svg);
+  background-color: var(--clr-primary-400);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: var(--ff-base);
+  color: white;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  margin-bottom: 50px;
+}
+
+
+.container {
+  display: grid;
+  margin-bottom: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.125em;
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-bold);
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 23px;
+  margin-bottom: 2.5em;
+}
+
+.hero-content a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1em 5em;
+  background-color: white;
+  border-radius: 1.5em;
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-light);
+  box-shadow: 0 8px 8px -8px black;
+}
+
+.hero-content a:hover {
+  background-color: var(--clr-primary-900);
+  color: white;
+}
+
+footer {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 46px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--clr-primary-900);
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 60px 80px 60px 80px;
+    background-image: url(../images/bg-desktop.svg);
+  }
+
+  header {
+    margin-bottom: 45px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-img {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-family: var(--ff-headings);
+    font-weight: var(--ff-bold);
+    margin-bottom: 45px;
+  }
+
+  .hero-content a {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1em 4.5em;
+    background-color: white;
+    border-radius: 1.5em;
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-light);
+    box-shadow: 0 8px 8px -8px black;
+  }
+
+  footer {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+  }
+
+}
